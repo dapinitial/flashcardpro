@@ -15,7 +15,13 @@ class Stacklist extends Component {
       <div>
         {stacks.map(stack => {
           return (
-            <Link to="/stack" key={stack.id}>
+            <Link
+              to="/stack"
+              key={stack.id}
+              onClick={() => {
+                this.props.setStack(stack);
+              }}
+            >
               <h4>{stack.title}</h4>
             </Link>
           );
