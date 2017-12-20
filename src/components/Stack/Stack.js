@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import Card from "../Card/Card";
 
 import "./Stack.css";
 
@@ -10,11 +11,13 @@ class Stack extends Component {
     const { title, cards } = this.props.stack;
     return (
       <div>
-        <Link to="/">Home</Link>
+        <Link to="/" className="link-home">
+          Home
+        </Link>
         <h3>{title}</h3>
-        <hr />
+        <br />
         {cards.map(card => {
-          return <div key={card.id}>{card.prompt}</div>;
+          return <Card key={card.id} card={card} />;
         })}
       </div>
     );
