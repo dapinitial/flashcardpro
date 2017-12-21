@@ -25,8 +25,9 @@ class Stack extends Component {
 }
 
 function mapStateToProps(state) {
+  // console.log("state", state);
   return {
-    stack: state
+    stack: state.stack
   };
 }
 
