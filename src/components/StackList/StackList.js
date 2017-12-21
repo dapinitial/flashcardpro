@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import stacks from "../../data/stacks.json";
 import { setStack, loadStacks } from "../../actions";
 
-import "./Stacklist.css";
+import "./StackList.css";
 
 class Stacklist extends Component {
   componentDidMount() {
@@ -14,7 +14,7 @@ class Stacklist extends Component {
   }
 
   render() {
-    //console.log("stacklist props", this.props);
+    console.log("stacklist props", this.props);
 
     return (
       <div>
@@ -37,7 +37,7 @@ class Stacklist extends Component {
 }
 
 function mapStateToProps(state) {
-  // console.log("state", state);
+  console.log("state", state);
   return {
     stacks: state.stacks
   };

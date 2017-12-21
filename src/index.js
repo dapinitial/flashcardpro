@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import rootReducer from "./reducers";
 import App from "./components/App/App";
 import Stack from "./components/Stack/Stack";
+import StackForm from "./components/StackForm/StackForm";
 import { setStack } from "./actions";
 import "./index.css";
 
@@ -20,6 +21,7 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/" component={App} />
         <Route path="/stack" component={Stack} />
+        <Route path="/stack_form" component={StackForm} />
       </Switch>
     </BrowserRouter>
   </Provider>,

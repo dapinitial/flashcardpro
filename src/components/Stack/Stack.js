@@ -7,7 +7,7 @@ import "./Stack.css";
 
 class Stack extends Component {
   render() {
-    //console.log("stack props", this.props);
+    console.log("stack props", this.props);
     const { title, cards } = this.props.stack;
     return (
       <div>
@@ -25,7 +25,7 @@ class Stack extends Component {
 }
 
 function mapStateToProps(state) {
-  // console.log("state", state);
+  console.log("state", state);
   return {
     stack: state.stack
   };
