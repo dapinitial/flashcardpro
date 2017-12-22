@@ -6,7 +6,7 @@ import { setStack, loadStacks } from "../../actions";
 
 import "./StackList.css";
 
-class Stacklist extends Component {
+export class StackList extends Component {
   componentDidMount() {
     if (this.props.stacks.length === 0) {
       this.props.loadStacks(stacks);
@@ -14,7 +14,7 @@ class Stacklist extends Component {
   }
 
   render() {
-    console.log("stacklist props", this.props);
+    console.log("StackList props", this.props);
 
     return (
       <div>
@@ -43,4 +43,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { setStack, loadStacks })(Stacklist);
+export default connect(mapStateToProps, { setStack, loadStacks })(StackList);

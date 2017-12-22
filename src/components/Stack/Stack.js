@@ -5,14 +5,14 @@ import Card from "../Card/Card";
 
 import "./Stack.css";
 
-class Stack extends Component {
+export class Stack extends Component {
   render() {
     console.log("stack props", this.props);
     const { title, cards } = this.props.stack;
     return (
       <div>
         <Link to="/" className="link-home">
-          Home
+          <h4>Home</h4>
         </Link>
         <h3>{title}</h3>
         <br />

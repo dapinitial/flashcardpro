@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import "./Card.css";
 
-class Card extends Component {
+export class Card extends Component {
   constructor() {
     super();
     this.state = { reveal: false };
