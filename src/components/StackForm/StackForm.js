@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import {
   Form,
@@ -7,6 +8,7 @@ import {
   ControlLabel,
   Button
 } from "react-bootstrap";
+import { addStack } from "../../actions";
 
 class StackForm extends Component {
   constructor() {
@@ -33,9 +35,12 @@ class StackForm extends Component {
     this.setState({ cards });
   }
 
-  render() {
+  addStack() {
     console.log("StackForm state", this.state);
+    this.props.addStack(this.state);
+  }
 
+  render() {
     return (
       <div>
         <Link to="/" className="link-home">
@@ -75,10 +80,11 @@ class StackForm extends Component {
           })}
         </Form>
         <hr />
-        <Button onClick={() => this.addCard()}>Add Card</Button>
+        <Button onClick={() => this.addCard()}>Design a Card</Button>{" "}
+        <Button onClick={() => this.addStack()}>Save and Add to Stack</Button>
       </div>
     );
   }
 }
 
-export default StackForm;
+export default connect(null, { addStack })(StackForm);
