@@ -10,7 +10,7 @@ import {
 } from "react-bootstrap";
 import { addStack } from "../../actions";
 
-class StackForm extends Component {
+export class StackForm extends Component {
   constructor() {
     super();
 
@@ -46,7 +46,7 @@ class StackForm extends Component {
         <Link to="/" className="link-home">
           <h4>Home</h4>
         </Link>
-        <h4>StackForm</h4>
+        <h4>Create a New Stack</h4>
         <br />
         <Form inline>
           <FormGroup>
@@ -62,13 +62,13 @@ class StackForm extends Component {
               <div key={card.id}>
                 <br />
                 <FormGroup>
-                  <ControlLabel>Prompt</ControlLabel>{" "}
+                  <ControlLabel>Prompt: </ControlLabel>{" "}
                   <FormControl
                     onChange={event =>
                       this.updateCardPart(event, index, "prompt")
                     }
                   />{" "}
-                  <ControlLabel>Answer</ControlLabel>
+                  <ControlLabel>Answer: </ControlLabel>
                   <FormControl
                     onChange={event =>
                       this.updateCardPart(event, index, "answer")
